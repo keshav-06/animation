@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anmation By Keshav 20BCE0285</title>
+</head>
+<style>
+    body {
+        background: antiquewhite;
+    }
+    
+    .swing {
+        animation: swing ease-in-out 1s infinite alternate;
+        transform-origin: center -20px;
+        float: left;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    }
+    
+    .swing img {
+        border: 5px solid #f8f8f8;
+        display: block;
+    }
+    
+    .swing:before {
+        content: '';
+        position: absolute;
+        width: 5px;
+        height: 5px;
+        top: -14px;
+        left: 54%;
+        z-index: 5;
+        border-radius: 50% 50%;
+        background: #000;
+    }
+    
+    .swing:after {
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        border: 1px solid #999;
+        top: -10px;
+        left: 50%;
+        z-index: 0;
+        border-bottom: none;
+        border-right: none;
+        transform: rotate(45deg);
+    }
+    
+    @keyframes swing {
+        0% {
+            transform: rotate(3deg);
+        }
+        100% {
+            transform: rotate(-3deg);
+        }
+    }
+    
+    .page {
+        /* display:none; */
+        opacity: 0;
+    }
+    
+    .main-div {
+        transition: all 1s;
+        /* opacity: 1; */
+    }
+    
+    .wholepage {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn {
+        height: 60px;
+        width: 90px;
+        font-size: large;
+        background-color: rgb(137, 29, 232);
+        box-shadow: 0 0 11px rgba(0, 0, 0, 0.5);
+        border-radius: 5px;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    
+    .btn:hover {
+        background-color: rgb(139, 78, 246);
+        transform: scale(1.05);
+    }
+</style>
+
+<body>
+    <div class="wholepage">
+
+        <div class="page main-div" id="page">
+            <figure class="swing">
+                <img src="Avengers_Age_of_Ultron_poster.jpg" width="200">
+            </figure>
+            <figure class="swing">
+                <img src="Avengers_Infinity_War_poster.jpg" width="200">
+            </figure>
+            <figure class="swing">
+                <img src="Avengers_Endgame_poster.jpg" width="200">
+            </figure>
+            <figure class="swing">
+                <img src="Ant-Man_(film)_poster.jpg" width="200">
+            </figure>
+            <figure class="swing">
+                <img src="Captain_America_The_Winter_Soldier_poster.jpg" width="200">
+            </figure>
+            <figure class="swing">
+                <img src="Doctor_Strange_(2016_film)_poster.jpg" width="200">
+            </figure>
+            <figure class="swing">
+                <img src="Guardians_of_the_Galaxy_(film)_poster.jpg" width="200">
+            </figure>
+            <figure class="swing">
+                <img src="Guardians_of_the_Galaxy_Vol_2_poster.jpg" width="200">
+            </figure>
+            <figure class="swing">
+                <img src="Keshav 20BCE0285.jpeg" width="200">
+            </figure>
+            <figure class="swing">
+                <img src="20bce0285.jpeg" width="200">
+            </figure>
+        </div>
+
+        <div class="button" style="margin-top: 20px;">
+            <button class="btn" onclick="myfunction()">Click me</button>
+        </div>
+    </div>
+    <script>
+        function myfunction() {
+            document.getElementById('page').classList.toggle('page');
+        }
+    </script>
+</body>
+
+</html>
